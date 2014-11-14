@@ -1,0 +1,13 @@
+{
+  "name": "dashboard-example",
+  "version": "0.0.0",
+  "description": "This is a responsive bootstrap-based dashboard with draggable widgets hosted with a simple nodeJS server.",
+  "main": "mserver.js",
+  "repository": "https://github.com/sadam0930/dashboard-example",
+  "author": "Steven Adam <s.adam0930@gmail.com>",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "~3.2.4",
+    "socket.io": "~0.9.14"
+  }
+}
