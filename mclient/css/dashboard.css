@@ -86,20 +86,67 @@ body {
 
 
 /*
- * Placeholder dashboard ideas
+ * Chart content
  */
 
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
+.axis {
+	  font: 10px sans-serif;
 }
-.placeholders h4 {
-  margin-bottom: 0;
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
 }
-.placeholder {
-  margin-bottom: 20px;
+
+/*
+ * Widget
+ */
+ 
+.widget {
+  border: solid;
+  border-width: 1px;
+  border-color: #D0D0D0 ;
 }
-.placeholder img {
+
+.widget .top,
+.widget .bottom {
+  /*height: 45px;*/
+  background-color: #D8D8D8;
+}
+
+.widget .info {
+  height: 90px;
+  background-color: #F0F0F0 ;
+}
+
+.gridster > ul {
+  list-style-type: none;
+}
+
+/*
+ * Custom Datatable CSS
+ */
+
+.dataTables_wrapper .dataTables_filter {
+  padding-top: 0.6em;
   display: inline-block;
-  border-radius: 50%;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  display: inline-block;
+}
+
+table.dataTable {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }

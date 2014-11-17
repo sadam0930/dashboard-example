@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
     <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/css/jquery.gridster.min.css">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="/css/dashboard.css">
   </head>
@@ -61,13 +62,23 @@
         </div>
         
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          
           <h1 class="page-header">Content Listing: Twitter</h1>
-
-          <div class="row placeholders" id="chart-1">
+          <div class="wrapper gridster">
+            <ul>
+               <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+                  <div class="widget" id="chart-1">
+                    <div class="top" style="height:45px"></div>
+                    <div class="info"></div>
+                  </div>
+               </li>
+               <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+                  <div class="widget table-responsive" id="table-1">
+                  </div>
+               </li>
+            </ul>
           </div>
-
-          <div class="table-responsive" id="table-1">
-          </div>
+          
         </div>
         
       </div>
@@ -81,6 +92,8 @@
     <script src="/js/plugin-input.js"></script>
     <script src="/js/dataTables.bootstrap.js"></script>
     <script src="/js/d3.v3.js"></script>
+    <script src="/js/jquery.gridster.min.js"></script>
+    <script src="/js/jquery.gridster.with-extras.min.js"></script>
     <script src="/js/meelo-test.js"></script>
   </body>
 </html>
