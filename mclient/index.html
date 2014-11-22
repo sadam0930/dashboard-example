@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="/css/dataTables.bootstrap.css">
     <link rel="stylesheet" href="/css/jquery.gridster.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="/css/dashboard.css">
   </head>
@@ -22,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">meelo</a>
+          <a class="navbar-brand" href="#">hello</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -39,8 +40,8 @@
     </nav>
 
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+      <div class="row row-offcanvas">
+        <div class="col-sm-3 col-md-2 sidebar sidebar-wrapper">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Reports</a></li>
@@ -61,18 +62,57 @@
           </ul>
         </div>
         
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main sidebar-wrapper">
+          <p>
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
           
           <h1 class="page-header">Content Listing: Twitter</h1>
           <div class="wrapper gridster">
             <ul>
                <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
                   <div class="widget" id="chart-1">
-                    <div class="top" style="height:45px"></div>
+                    <div class="top" style="height:45px">
+                      <div class="group1">
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials
+                          <span class="caret"></span></button>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                          </ul>
+                        </div>
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials
+                          <span class="caret"></span></button>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                          </ul>
+                        </div>
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials
+                          <span class="caret"></span></button>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     <div class="info"></div>
                   </div>
                </li>
-               <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+               <li data-row="2" data-col="1" data-sizex="1" data-sizey="2">
                   <div class="widget table-responsive" id="table-1">
                   </div>
                </li>

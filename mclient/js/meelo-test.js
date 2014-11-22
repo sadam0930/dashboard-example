@@ -1,20 +1,37 @@
 $(document).ready(function(){
+    initGrid();
     $.getJSON( "/ajax/twitter.json", function( response ) {
         generateChart(response);
         generateTable(response);
     });
-    
+    initCallbacks();
 });
 
 /*
 TODO:
-Add draggability
+Add gridster resize = true
+Add responsive chart logic
 */
 
-$(".gridster ul").gridster({
-    widget_margins: [10, 10],
-    widget_base_dimensions: [950, 500]
-});
+function initCallbacks(){
+    $('[data-toggle=offcanvas]').click(function () {
+        $('.sidebar-wrapper').toggleClass('collapsed');
+    });
+}
+
+function initGrid() { 
+    $(".gridster ul").gridster({
+        widget_margins: [10, 10],
+        widget_base_dimensions: [950, 450]
+    });
+    //remove unwanted gridster classes from inner li
+    $('.dropdown-menu li').removeClass('gs-w');
+    $('.dropdown-menu').css('width', '');
+}
+
+function resizeChart() {
+    
+}
 
 function generateChart(response) {
     var chartDivId = '#chart-1';
@@ -25,7 +42,7 @@ function generateChart(response) {
     daybefore.setDate((day.getDate() - 1));
     dayafter.setDate((day.getDate() + 1));
    
-    var margin = {top: 40, right: 150, bottom: 70, left: 100},
+    var margin = {top: 40, right: 150, bottom: 70, left: 65},
     width = 950 - margin.left - margin.right,
     height = 300 - margin.top - margin.bottom;
 
@@ -145,9 +162,21 @@ function generateTable(response) {
     buildTable(response, tableDivId, tableId);
     populateTable(response, tableId);
     $('#'+tableId).dataTable( {
-        "dom": '<"top"fp>rt<"bottom"fp><"clear">',
-        "pagingType": "input"
+        "dom": '<"top"pf>rt<"bottom"pf><"clear">',
+        "pagingType": "input",
+        "language": {
+            "search": "",
+            "paginate": {
+                "first": "",
+                "previous": "",
+                "next": "",
+                "last": ""
+            }
+        }
     });
+    $(".first.paginate_button, .last.paginate_button").remove();
+    $(".paginate_of, .paginate_page").hide();
+    $(".dataTables_filter").append('<span id="g-search-button"></span>');
     $('.top').addClass("clearfix")
     $('.bottom').addClass("clearfix")
 }
