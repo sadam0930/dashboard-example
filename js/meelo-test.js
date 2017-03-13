@@ -1,6 +1,6 @@
 $(document).ready(function(){
     initGrid();
-    $.getJSON( "/ajax/twitter.json", function( response ) {
+    $.getJSON( "ajax/twitter.json", function( response ) {
         generateChart(response);
         generateTable(response);
     });
